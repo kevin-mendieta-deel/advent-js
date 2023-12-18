@@ -2,7 +2,7 @@ import { describe, expect, it } from "bun:test";
 
 import { maxGifts } from "./avoidTheAlarm";
 
-describe("calculating time problem tests", () => {
+describe("avoid the alarm problem tests", () => {
   it("should return a number", () => {
     const result = maxGifts([1]);
     expect(result).toBeNumber();
