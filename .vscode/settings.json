@@ -3,5 +3,8 @@
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
-  "editor.detectIndentation": false
+  "editor.detectIndentation": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  }
 }
