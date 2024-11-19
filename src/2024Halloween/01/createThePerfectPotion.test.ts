@@ -2,7 +2,7 @@ import { describe, expect, it } from "bun:test";
 
 import { createMagicPotion } from "./createThePerfectPotion";
 
-describe("first repeated gift problem tests", () => {
+describe("create the perfect potion problem tests", () => {
   it("should pass test 1", () => {
     const result = createMagicPotion([13, 5, 6, 2], 8);
     expect(result).toStrictEqual([2, 3]);
