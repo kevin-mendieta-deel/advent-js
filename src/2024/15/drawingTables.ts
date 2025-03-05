@@ -20,8 +20,9 @@ export function drawTable(
     separator += `+${"-".repeat(padding + 2)}`;
   }
   header += "|\n";
-  separator += "+\n";
-  let table = `${separator}${header}${separator}`;
+  separator += "+";
+
+  let table = `${separator}\n${header}${separator}\n`;
   for (const record of data) {
     for (const [key, value] of Object.entries(record)) {
       const colSize = maxColumnWidths.get(key) || 0;
@@ -31,5 +32,5 @@ export function drawTable(
     table += "|\n";
   }
 
-  return table + separator.trim();
+  return `${table}${separator}`;
 }
