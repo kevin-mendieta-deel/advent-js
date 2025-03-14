@@ -5,22 +5,7 @@ type Node = {
 };
 
 function reverse(tree: Node | undefined): Node | undefined {
-  if (!tree) {
-    return undefined;
-  }
-
-  const newNode: Node = {
-    value: tree.value,
-  };
-  const left = reverse(tree.right);
-  if (left) {
-    newNode.left = left;
-  }
-
-  const right = reverse(tree.left);
-  if (right) {
-    newNode.right = right;
-  }
+  if (!tree) return undefined;
 
   return {
     value: tree.value,
@@ -33,13 +18,9 @@ function areTreesEqual(
   tree1: Node | undefined,
   tree2: Node | undefined,
 ): boolean {
-  if (!tree1 && !tree2) {
-    return true;
-  }
+  if (!tree1 && !tree2) return true;
 
-  if (tree1?.value !== tree2?.value) {
-    return false;
-  }
+  if (tree1?.value !== tree2?.value) return false;
 
   return (
     areTreesEqual(tree1?.left, tree2?.left) &&
